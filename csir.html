@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSIR-NBRI Lucknow Recruitment 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2a5885;
+            --primary-light: #3a6ea5;
+            --secondary: #e74c3c;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --accent: #4CAF50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            line-height: 1.7;
+            color: #333;
+            background-color: #f5f5f5;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* 3D Background Effect */
+        .bg-3d {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, #1a3a6e 0%, #2a5885 100%);
+            overflow: hidden;
+        }
+
+        .bg-3d::before {
+            content: '';
+            position: absolute;
+            width: 300%;
+            height: 300%;
+            top: -100%;
+            left: -50%;
+            background-image: 
+                radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px),
+                radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 40px 40px, 60px 60px;
+            transform: rotate(15deg);
+            animation: bgMove 120s linear infinite;
+        }
+
+        @keyframes bgMove {
+            0% { transform: rotate(15deg) translateX(0); }
+            100% { transform: rotate(15deg) translateX(-100px); }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+        }
+        
+        header {
+            background: linear-gradient(135deg, rgba(42, 88, 133, 0.9), rgba(26, 58, 110, 0.95));
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 15s infinite linear;
+        }
+
+        @keyframes pulse {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+            position: relative;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+            position: relative;
+        }
+        
+        .alert-bar {
+            background: linear-gradient(135deg, var(--secondary), #c0392b);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: pulseShadow 2s infinite alternate;
+        }
+
+        @keyframes pulseShadow {
+            from { box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3); }
+            to { box-shadow: 0 5px 25px rgba(231, 76, 60, 0.5); }
+        }
+        
+        .quick-summary {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 35px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        table, th, td {
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        
+        th {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            font-weight: 500;
+        }
+        
+        tr:nth-child(even) {
+            background-color: rgba(0,0,0,0.02);
+        }
+
+        tr:hover {
+            background-color: rgba(42, 88, 133, 0.05);
+        }
+        
+        .section-title {
+            color: var(--primary);
+            border-bottom: 3px solid;
+            border-image: linear-gradient(135deg, var(--primary), var(--accent)) 1;
+            padding-bottom: 10px;
+            margin: 35px 0 20px 0;
+            font-size: 1.7rem;
+            font-weight: 600;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary);
+        }
+        
+        .job-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--primary);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .job-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(42, 88, 133, 0.03), transparent);
+            z-index: 0;
+        }
+        
+        .job-title {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .job-title::before {
+            content: '';
+            position: absolute;
+            left: -25px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(42, 88, 133, 0.08), rgba(76, 175, 80, 0.08));
+            border-left: 5px solid var(--accent);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .highlight-box h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(42, 88, 133, 0.3);
+            margin: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(42, 88, 133, 0.4);
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn-danger {
+            background: linear-gradient(135deg, var(--secondary), #c0392b);
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+        }
+
+        .btn-danger:hover {
+            box-shadow: 0 8px 20px rgba(231, 76, 60, 0.4);
+        }
+
+        .btn i {
+            margin-right: 8px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(33, 37, 41, 0.9), rgba(0, 0, 0, 0.95));
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        footer p {
+            margin: 10px 0;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* Floating particles */
+        .particle {
+            position: absolute;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.4rem;
+            }
+            
+            th, td {
+                padding: 12px 8px;
+                font-size: 0.9rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 3D Background -->
+    <div class="bg-3d"></div>
+
+    <!-- Floating particles -->
+    <div id="particles"></div>
+
+    <div class="container">
+        <header>
+            <h1>CSIR-NBRI Lucknow Recruitment 2025</h1>
+            <div class="subtitle">National Botanical Research Institute</div>
+        </header>
+        
+        <div class="alert-bar">
+            📢 Latest Job Openings for Scientists & Technical Staff | 🗓️ Last Date: 15 June 2025
+        </div>
+        
+        <div class="quick-summary">
+            <h2 class="section-title">📋 Quick Summary</h2>
+            <table>
+                <tr>
+                    <th>Organization</th>
+                    <td>CSIR-National Botanical Research Institute (NBRI), Lucknow</td>
+                </tr>
+                <tr>
+                    <th>Total Vacancies</th>
+                    <td>24 Posts (Scientists & Technical Roles)</td>
+                </tr>
+                <tr>
+                    <th>Job Location</th>
+                    <td>Lucknow, Uttar Pradesh</td>
+                </tr>
+                <tr>
+                    <th>Application Mode</th>
+                    <td>Online</td>
+                </tr>
+                <tr>
+                    <th>Official Website</th>
+                    <td><a href="https://www.nbri.res.in" style="color: var(--primary); font-weight: 600;">www.nbri.res.in</a></td>
+                </tr>
+            </table>
+        </div>
+        
+        <h2 class="section-title">🔍 Available Positions</h2>
+        
+        <div class="job-card">
+            <h3 class="job-title">1. Scientist (Grade-IV) – 08 Posts</h3>
+            <p><strong>Pay Scale:</strong> ₹78,000 - ₹2,08,200</p>
+            <p><strong>Qualifications:</strong> Ph.D. in Botany/Biotechnology + 2 yrs experience</p>
+            <p><strong>Age Limit:</strong> 37 years (Age relaxation as per rules)</p>
+        </div>
+        
+        <div class="job-card">
+            <h3 class="job-title">2. Technical Officer – 12 Posts</h3>
+            <p><strong>Pay Scale:</strong> ₹47,000 - ₹1,49,000</p>
+            <p><strong>Qualifications:</strong> M.Sc + 3 yrs lab experience</p>
+            <p><strong>Age Limit:</strong> 32 years</p>
+        </div>
+        
+        <div class="job-card">
+            <h3 class="job-title">3. Junior Engineer (Electrical) – 04 Posts</h3>
+            <p><strong>Pay Scale:</strong> ₹35,000 - ₹1,12,000</p>
+            <p><strong>Qualifications:</strong> Diploma in Electrical Engg + 2 yrs experience</p>
+            <p><strong>Age Limit:</strong> 30 years</p>
+        </div>
+        
+        <div class="highlight-box">
+            <h3>ℹ️ Important Dates</h3>
+            <p>• Application Start Date: 20 May 2025</p>
+            <p>• Last Date to Apply: 15 June 2025</p>
+            <p>• Admit Card Available: 1 July 2025</p>
+            <p>• Tentative Exam Date: 20 July 2025</p>
+        </div>
+        
+        <h2 class="section-title">📝 How to Apply</h2>
+        <ol style="margin-left: 25px; margin-bottom: 25px; font-weight: 500;">
+            <li style="margin-bottom: 10px;">Visit the official website <a href="https://www.nbri.res.in" style="color: var(--primary); font-weight: 600;">www.nbri.res.in</a></li>
+            <li style="margin-bottom: 10px;">Click on "Recruitment 2025" notification</li>
+            <li style="margin-bottom: 10px;">Register with email and mobile number</li>
+            <li style="margin-bottom: 10px;">Fill the application form with required details</li>
+            <li style="margin-bottom: 10px;">Upload scanned documents (photo, signature, certificates)</li>
+            <li style="margin-bottom: 10px;">Pay application fee (if applicable)</li>
+            <li style="margin-bottom: 10px;">Submit and print application confirmation</li>
+        </ol>
+        
+        <div style="text-align: center; margin: 40px 0;">
+            <a href="#" class="btn"><i>📝</i> Apply Online</a>
+            <a href="#" class="btn btn-danger"><i>📄</i> Download Notification PDF</a>
+        </div>
+        
+        <footer>
+            <p>© 2025 CSIR-NBRI Lucknow | Official Recruitment Portal</p>
+            <p>For technical queries: <a href="mailto:recruitment@nbri.res.in">recruitment@nbri.res.in</a> | Helpline: 0522-2297800</p>
+        </footer>
+    </div>
+
+    <script>
+        // Create floating particles
+        document.addEventListener('DOMContentLoaded', function() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random size between 2px and 6px
+                const size = Math.random() * 4 + 2;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // Random position
+                particle.style.left = `${Math.random() * 100}vw`;
+                particle.style.top = `${Math.random() * 100}vh`;
+                
+                // Random animation
+                const duration = Math.random() * 20 + 10;
+                const delay = Math.random() * 5;
+                particle.style.animation = `float ${duration}s linear ${delay}s infinite`;
+                
+                // Add to DOM
+                particlesContainer.appendChild(particle);
+            }
+            
+            // Add floating animation
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes float {
+                    0% {
+                        transform: translateY(0) translateX(0);
+                        opacity: 1;
+                    }
+                    50% {
+                        transform: translateY(-100px) translateX(50px);
+                        opacity: 0.5;
+                    }
+                    100% {
+                        transform: translateY(0) translateX(100px);
+                        opacity: 1;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>
